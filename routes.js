@@ -5,6 +5,10 @@ const Assets = require('./handlers/assets')
 
 module.exports = [{
   method: 'GET',
+  path: '/',
+  handler: Pages.home
+} , {
+  method: 'GET',
   path: '/{params*}',
   handler: Assets.servePublicDirectory
 }]
