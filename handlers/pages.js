@@ -14,3 +14,17 @@ exports.home = function (request, reply) {
     })
   })
 }
+
+exports.viewRecipe = function (request, reply) {
+    const apiUrl = this.apiBaseUrl + '/recipes/' + request.params.id
+
+    Wreck.get(apiUrl, { json: true }, (err, res, payload) => {
+      if (err) {
+        throw err
+      }
+      reply.view('recipe', {
+        recipe: payload
+      })
+    })
+
+}
