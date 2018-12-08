@@ -1,3 +1,9 @@
 'use strict'
 
-module.exports = []
+const Pages = require('./handlers/pages')
+
+module.exports = [{
+  method: 'GET',
+  path: '/',
+  handler: Pages.home
+}]
