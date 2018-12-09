@@ -29,4 +29,21 @@ module.exports = [{
       }
     },
     handler: Actions.login
+}, {
+    method: 'GET',
+    path: '/create',
+    handler: Pages.create
+}, {
+    method: 'POST',
+    path: '/create',
+    handler: Actions.createRecipe,
+    config: {
+      auth: {
+        mode: 'required'
+      }
+    }
+}, {
+    method: 'GET',
+    path: '/logout',
+    handler: Actions.logout
 }]

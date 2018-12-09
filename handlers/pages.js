@@ -31,6 +31,11 @@ exports.viewRecipe = function (request, reply) {
 }
 
 exports.login = function (request, reply) {
+  reply.view('login');
+}
 
-    reply.view('login');
+exports.create = function (request, reply) {
+  reply.view('create', {
+    user: request.auth.credentials
+  })
 }
