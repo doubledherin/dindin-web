@@ -28,7 +28,8 @@ server.register([
         layoutPath: './views/layout',
         layout: true,
         isCached: false,
-        partialsPath: './views/partials'
+        partialsPath: './views/partials',
+        helpersPath: './views/helpers'
       })
 
       server.route(require('./routes'))
