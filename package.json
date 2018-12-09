@@ -2,7 +2,7 @@
   "name": "dindin-web",
   "version": "1.0.0",
   "scripts": {
-    "start": "node index.js"
+    "start": "NODE_ENV=development node index.js"
   },
   "description": "A social network for food",
   "dependencies": {
